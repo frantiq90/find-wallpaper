@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="text-center">Image Name</h1>
+            <div class="thumbnail">
+                <a href="/images/{{ image }}">
+                    <img src="/images/{{ image }}" alt="...">
+                </a>
+                <div class="caption">
+                    <h3>Image Caption</h3>
+                    <ul>
+                        <li>tag 1</li>
+                        <li>tag 2</li>
+                        <li>tag 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -4,7 +4,7 @@
     <div class="row">
         {% for image in images %}
         <div class="col-xs-6 col-md-6">
-            <a href="#" class="thumbnail">
+            <a href="{{ path('view') }}" class="thumbnail">
                 <img src="/images/{{ image }}" alt="...">
             </a>
         </div>
