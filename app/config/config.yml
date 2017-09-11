@@ -1,4 +1,5 @@
 imports:
+    - { resource: easy_admin_bundle.yml }
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
@@ -81,3 +82,4 @@ doctrine_migrations:
     namespace: Application\Migrations
     table_name: migration_versions
     name: Application Migrations
+
