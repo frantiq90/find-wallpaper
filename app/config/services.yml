@@ -33,3 +33,14 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+
+    AppBundle\Command\SetupWallpapersCommand:
+      arguments:
+         $rootDir: "%kernel.root_dir%"
+         $em: "@doctrine.orm.default_entity_manager"
+      tags:
+         - { name: console.command }
+
+    app.command.wallpaper_setup:
+      alias: AppBundle\Command\SetupWallpapersCommand
+      public: true
