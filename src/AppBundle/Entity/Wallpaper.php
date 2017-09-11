@@ -22,7 +22,7 @@ class Wallpaper
     private $id;
 
     /**
-     * Many Users have One Address.
+     * Many Wallpapers have one category
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Category")
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      */
@@ -82,6 +82,8 @@ class Wallpaper
     public function setCategory(Category $category = null)
     {
         $this->category = $category;
+
+        return $this;
     }
 
     
