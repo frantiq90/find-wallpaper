@@ -31,6 +31,13 @@ class Wallpaper
     /**
      * @var string
      *
+     * @ORM\Column(name="file", type="string")
+    */
+    private $file;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="filename", type="string", length=255)
      */
     private $filename;
@@ -86,7 +93,21 @@ class Wallpaper
         return $this;
     }
 
-    
+    /**
+     * @return mixed
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param mixed $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
 
     /**
      * Set filename

@@ -44,3 +44,8 @@ services:
     app.command.wallpaper_setup:
       alias: AppBundle\Command\SetupWallpapersCommand
       public: true
+
+    app.service.file_mover:
+      class: AppBundle\Service\FileMover
+      arguments:
+        - "@filesystem"
